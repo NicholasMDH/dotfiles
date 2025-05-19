@@ -189,7 +189,7 @@ bindsym $mod+r mode "resize"
 # I put a symlink to /etc/i3status.conf in the ~/.config/i3 directory to make it 
 # easier to edit. It requires sudo permissions though
 bar {
-        status_command i3status
+        status_command i3status --config ~/.config/i3/i3status.conf
 }
 
 # Custom configurations
@@ -210,5 +210,5 @@ exec --no-startup-id picom
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +10%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
 
-# Set Windows+L to lock the screen
+# Set Windows+x to lock the screen
 bindsym $mod+x exec --no-startup-id i3lock

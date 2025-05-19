@@ -120,9 +120,6 @@ fi
 # Display shortened filepath in terminal
 PROMPT_DIRTRIM=3
 
-# scripts that I want to start with every new shell
-bash ~/Projects/scripts/startSSH.sh
-
 # Set everything to dark mode
 export GDK_DARK_THEME=1
 export QT_QPA_PLATFORMTHEME=gtk2

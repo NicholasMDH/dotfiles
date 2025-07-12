@@ -130,5 +130,3 @@ export QT_STYLE_OVERRIDE=Fusion
 
 # Set bash to use the Starship prompt
 eval "$(starship init bash)"
-
-. "$HOME/.local/bin/env"

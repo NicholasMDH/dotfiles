@@ -1,5 +1,5 @@
 #! /usr/bin/bash
-
+sudo apt clean
 sudo apt update;
 sudo apt full-upgrade -y;
 sudo apt autoremove -y;

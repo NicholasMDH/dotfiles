@@ -59,6 +59,9 @@ fi
 
 # User configuration
 
+# Put autocompletion files in .cache
+export ZSH_COMPDUMP=~/.cache/.zcompdump
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # Preferred editor for local and remote sessions

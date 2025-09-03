@@ -1,3 +1,8 @@
+# Put ephemeral files in .cache
+export HISTFILE=$HOME/.cache/.zhistory
+export ZSH_COMPDUMP=$HOME/.cache/.zcompdump
+export LESSHISTFILE=$HOME/.cache/.lesshst
+
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -32,11 +37,6 @@ ENABLE_CORRECTION="true"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Put ephemeral files in .cache
-export HISTFILE=$HOME/.cache/.zhistory
-export ZSH_COMPDUMP=$HOME/.cache/.zcompdump
-export LESSHISTFILE=$HOME/.cache/.lesshst
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/

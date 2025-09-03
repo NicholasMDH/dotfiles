@@ -33,6 +33,11 @@ ENABLE_CORRECTION="true"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+# Put ephemeral files in .cache
+export HISTFILE=$HOME/.cache/.zhistory
+export ZSH_COMPDUMP=$HOME/.cache/.zcompdump
+export LESSHISTFILE=$HOME/.cache/.lesshst
+
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
@@ -58,9 +63,6 @@ if [ -f ~/.zsh_aliases ]; then
 fi
 
 # User configuration
-
-# Put autocompletion files in .cache
-export ZSH_COMPDUMP=~/.cache/.zcompdump
 
 # export MANPATH="/usr/local/man:$MANPATH"
 

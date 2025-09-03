@@ -198,7 +198,7 @@ bar {
 exec --no-startup-id xinput set-prop 11 312 1
 
 # Set laptop display to 125% scaling
-exec xrandr --output eDP --scale 0.8x0.8
+exec xrandr --output eDP --scale 0.75x0.75
 
 # Remap caps to escape for vim
 exec --no-startup-id setxkbmap -option caps:escape

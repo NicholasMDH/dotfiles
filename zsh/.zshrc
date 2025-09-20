@@ -43,8 +43,8 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+# Plugins I've removed: git zsh-syntax-highlighting
 plugins=(
-  git
   ssh
   ssh-agent
   starship 
@@ -52,7 +52,6 @@ plugins=(
   vi-mode
   zoxide
   zsh-autosuggestions
-  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh

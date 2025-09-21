@@ -195,7 +195,7 @@ bar {
 # Custom configurations
 
 # Fix scrolling orientation (THIS DOESN'T WORK ON MULTI-MONITOR)
-exec --no-startup-id xinput set-prop 11 312 1
+exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Natural Scrolling Enabled" 1
 
 # Set laptop & external displays to 125% scaling
 exec xrandr --output eDP --scale 0.75x0.75

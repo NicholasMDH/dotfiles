@@ -48,7 +48,6 @@ plugins=(
   ssh-agent
   starship 
   sudo
-  vi-mode
   zoxide
   zsh-autosuggestions
 )

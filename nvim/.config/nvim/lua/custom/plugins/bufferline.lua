@@ -13,7 +13,7 @@ return {
             filetype = 'neo-tree',
             text = 'filesystem',
             highlight = 'Directory',
-            separator = true,
+            separator = false,
           },
         },
       },

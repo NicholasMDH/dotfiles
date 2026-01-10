@@ -149,8 +149,9 @@ vim.o.sidescroll = 1
 -- See `:help 'confirm'`
 vim.o.confirm = true
 
--- User Powershell 7 as Noevim's shell (:term)
-vim.opt.shell = 'pwsh.exe'
+-- User zsh as Noevim's shell (:term)
+vim.opt.shell = '/usr/bin/zsh'
+
 --vim.opt.shellcmdflag = '-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command'
 vim.opt.shellquote = ''
 vim.opt.shellxquote = ''
@@ -553,7 +554,10 @@ require('lazy').setup({
           --
           -- When you move your cursor, the highlights will be cleared (the second autocommand).
           local client = vim.lsp.get_client_by_id(event.data.client_id)
-          if client and client_supports_method(client, vim.lsp.protocol.Methods.textDocument_documentHighlight, event.buf) then
+          if
+            client
+            and client_supports_method(client, vim.lsp.protocol.Methods.textDocument_documentHighlight, event.buf)
+          then
             local highlight_augroup = vim.api.nvim_create_augroup('kickstart-lsp-highlight', { clear = false })
             vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
               buffer = event.buf,
@@ -633,11 +637,10 @@ require('lazy').setup({
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
-        csharp_ls = {},
-        powershell_es = {
-          bundle_path = 'c:/Users/nicholas.dibello/Documents/PowerShellEditorServices-4.4.0',
-          shell = 'pwsh.exe',
-        },
+        -- powershell_es = {
+        --   bundle_path = 'c:/Users/nicholas.dibello/Documents/PowerShellEditorServices-4.4.0',
+        --   shell = 'pwsh.exe',
+        -- },
         -- clangd = {},
         -- gopls = {},
         -- pyright = {},
@@ -866,7 +869,12 @@ require('lazy').setup({
   },
 
   -- Highlight todo, notes, etc in comments
-  { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
+  {
+    'folke/todo-comments.nvim',
+    event = 'VimEnter',
+    dependencies = { 'nvim-lua/plenary.nvim' },
+    opts = { signs = false },
+  },
 
   { -- Collection of various small independent plugins/modules
     'echasnovski/mini.nvim',

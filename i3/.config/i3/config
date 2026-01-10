@@ -201,6 +201,9 @@ exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Natu
 exec xrandr --output eDP --scale 0.75x0.75
 exec xrandr --output DisplayPort-4 --scale 0.75x0.75
 
+# Set color temperature to 4000K
+exec redshift -O 4000
+
 # Remap caps to escape for vim
 exec --no-startup-id setxkbmap -option caps:escape
 
